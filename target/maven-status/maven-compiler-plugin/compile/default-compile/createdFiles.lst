@@ -1,0 +1,13 @@
+co\edu\ue\entities\Pagos.class
+co\edu\ue\entities\DetalleCompras.class
+co\edu\ue\entities\Direcciones.class
+co\edu\ue\entities\Telefonos.class
+co\edu\ue\entities\Productos.class
+co\edu\ue\principal\Principal.class
+co\edu\ue\entities\Clientes.class
+co\edu\ue\entities\Correos.class
+co\edu\ue\util\ConexionDB.class
+co\edu\ue\entities\Proveedores.class
+co\edu\ue\entities\CompraClientes.class
+co\edu\ue\entities\Empleados.class
+co\edu\ue\entities\CategoriaPagos.class
