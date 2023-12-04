@@ -22,7 +22,7 @@ public class ConexionDB {
     public ConexionDB(){
         this.user="root";
         this.password="";
-        this.dataBase="proyecto_poobd";
+        this.dataBase="proyecto_poo14a";
         this.portDataBase="3306";
         this.server="localhost";
         this.strConexion="jdbc:mysql://"+this.server+":"+this.portDataBase+"/"+this.dataBase;
