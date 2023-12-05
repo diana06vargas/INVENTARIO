@@ -1,4 +1,7 @@
-
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package co.edu.ue.util;
 
 import java.sql.Connection;
@@ -19,7 +22,7 @@ public class ConexionDB {
     public ConexionDB(){
         this.user="root";
         this.password="";
-        this.dataBase="proyecto_poo14a";
+        this.dataBase="proyecto_poobd";
         this.portDataBase="3306";
         this.server="localhost";
         this.strConexion="jdbc:mysql://"+this.server+":"+this.portDataBase+"/"+this.dataBase;

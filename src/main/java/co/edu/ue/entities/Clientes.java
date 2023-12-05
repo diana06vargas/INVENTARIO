@@ -11,7 +11,7 @@ public class Clientes {
    private String corr_codigo;
 
     
-   public Clientes (){
+   public Clientes (String text, String text1, String text2, String text3, String text4){
   
    }
 

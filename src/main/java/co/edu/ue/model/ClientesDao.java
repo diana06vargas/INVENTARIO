@@ -29,4 +29,8 @@ public class ClientesDao {
        
    return cliente;
    }
+
+    public void addUser(Clientes clientes) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
