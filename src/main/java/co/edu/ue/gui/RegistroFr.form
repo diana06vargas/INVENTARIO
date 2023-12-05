@@ -74,15 +74,10 @@
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="btnRegistrarCuenta" min="-2" pref="129" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="btnActualizar" min="-2" pref="129" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="btnDesactivar" min="-2" pref="129" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btnCerrar" min="-2" pref="129" max="-2" attributes="0"/>
-                              <Component id="btnBorrar" min="-2" pref="129" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
+                          <Component id="btnBorrar" min="-2" pref="129" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
+                          <Component id="btnCerrar" min="-2" pref="129" max="-2" attributes="0"/>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -97,23 +92,20 @@
                       <Component id="txtContraseña" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="txtNombres" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="txtApellidos" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCorreoElectronico" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
                   <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="txtCorreoElectronico" min="-2" max="-2" attributes="0"/>
+                      <Component id="txtApellidos" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
                   <Component id="txtDocumento" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="btnRegistrarCuenta" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="btnActualizar" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
-                      <Component id="btnDesactivar" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                       <Component id="btnBorrar" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
+                      <Component id="btnCerrar" alignment="3" min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btnCerrar" min="-2" pref="33" max="-2" attributes="0"/>
-                  <EmptySpace pref="78" max="32767" attributes="0"/>
+                  <EmptySpace pref="129" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -174,22 +166,6 @@
               </Border>
             </Property>
           </Properties>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnActualizar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Actualizar"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnActualizarActionPerformed"/>
-          </Events>
-        </Component>
-        <Component class="javax.swing.JButton" name="btnDesactivar">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Desactivar"/>
-          </Properties>
-          <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDesactivarActionPerformed"/>
-          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnBorrar">
           <Properties>
