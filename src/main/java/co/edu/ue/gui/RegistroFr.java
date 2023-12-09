@@ -50,7 +50,7 @@ public class RegistroFr extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Registro de Usuarios"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Registro de Clientes"));
 
         txtDocumento.setBorder(javax.swing.BorderFactory.createTitledBorder("Documento"));
         txtDocumento.addActionListener(new java.awt.event.ActionListener() {

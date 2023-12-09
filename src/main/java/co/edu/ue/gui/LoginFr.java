@@ -139,7 +139,7 @@ public class LoginFr extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCerrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarActionPerformed
-        // TODO add your handling code here:
+        this.dispose();
     }//GEN-LAST:event_btnCerrarActionPerformed
 
     private void PasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordActionPerformed
@@ -147,14 +147,17 @@ public class LoginFr extends javax.swing.JFrame {
     }//GEN-LAST:event_PasswordActionPerformed
 
     private void btnIniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarSesionActionPerformed
-        Escritorio escritorio = new Escritorio();
+        escritorioEmpleado escritorio = new escritorioEmpleado();
         escritorio.setVisible(true);
         LoginFr pantalla = new LoginFr();
         pantalla.setVisible(false);
     }//GEN-LAST:event_btnIniciarSesionActionPerformed
 
     private void btnCrearCuentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearCuentaActionPerformed
-        // TODO add your handling code here:
+        RegistroFr registro = new RegistroFr();
+        registro.setVisible(true);
+        RegistroFr pantalla = new RegistroFr();
+        pantalla.setVisible(false);
     }//GEN-LAST:event_btnCrearCuentaActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -35,18 +35,21 @@
                               <Component id="btnActualizar" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="lblNombreProducto" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="lblNombreProducto1" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="lblNombreProducto" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="1" attributes="0">
+                                              <Component id="lblNombreProducto3" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblNombreProducto2" alignment="1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="lblNombreProducto4" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="lblNombreProducto3" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblNombreProducto2" alignment="1" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblNombreProducto4" alignment="1" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="59" pref="59" max="-2" attributes="0"/>
+                                      <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
+                                      <Component id="lblNombreProducto1" min="-2" pref="61" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
@@ -127,12 +130,14 @@
                   <Component id="lblPago" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="lblNombreProducto1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblPrecio1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblCantidad1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblProveedor1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lblPago1" alignment="3" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblPrecio1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblCantidad1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblProveedor1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblPago1" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="lblNombreProducto1" max="32767" attributes="0"/>
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -202,9 +207,6 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblNombreProducto1">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jLabel7"/>
-      </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="lblPrecio1">
       <Properties>

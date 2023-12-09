@@ -4,6 +4,9 @@
  */
 package co.edu.ue.gui;
 
+import co.edu.ue.entities.Productos;
+import co.edu.ue.model.ProductosDao;
+
 /**
  *
  * @author Diana
@@ -70,8 +73,6 @@ public class DetalleProductoFr extends javax.swing.JFrame {
         lblProveedor.setText("Proveedor");
 
         lblPago.setText("Pago");
-
-        lblNombreProducto1.setText("jLabel7");
 
         lblPrecio1.setText("jLabel8");
 
@@ -149,16 +150,18 @@ public class DetalleProductoFr extends javax.swing.JFrame {
                                 .addGap(48, 48, 48)
                                 .addComponent(btnActualizar))
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                         .addComponent(lblNombreProducto)
-                                        .addComponent(lblNombreProducto1))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                .addComponent(lblNombreProducto3)
+                                                .addComponent(lblNombreProducto2)
+                                                .addComponent(lblNombreProducto4))
+                                            .addGap(59, 59, 59)))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(lblNombreProducto3)
-                                            .addComponent(lblNombreProducto2)
-                                            .addComponent(lblNombreProducto4))
-                                        .addGap(59, 59, 59)))
+                                        .addGap(6, 6, 6)
+                                        .addComponent(lblNombreProducto1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                 .addGap(53, 53, 53)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblPrecio)
@@ -218,12 +221,13 @@ public class DetalleProductoFr extends javax.swing.JFrame {
                     .addComponent(lblProveedor)
                     .addComponent(lblPago))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNombreProducto1)
-                    .addComponent(lblPrecio1)
-                    .addComponent(lblCantidad1)
-                    .addComponent(lblProveedor1)
-                    .addComponent(lblPago1))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lblPrecio1)
+                        .addComponent(lblCantidad1)
+                        .addComponent(lblProveedor1)
+                        .addComponent(lblPago1))
+                    .addComponent(lblNombreProducto1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblNombreProducto2)
@@ -258,7 +262,15 @@ public class DetalleProductoFr extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAgregarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarProductoActionPerformed
-        // TODO add your handling code here:
+        Productos productos = new Productos(lblNombreProducto1.getText(),lblNombreProducto2.getText(),
+                        lblNombreProducto3.getText(),lblNombreProducto4.getText(),
+                        lblPrecio1.getText(),lblPrecio2.getText(),lblPrecio3.getText(),lblPrecio4.getText(),
+                        lblCantidad1.getText(),lblCantidad2.getText(),lblCantidad3.getText(),lblCantidad4.getText(),
+                        lblProveedor1.getText(),lblProveedor2.getText(),lblProveedor3.getText(),lblProveedor4.getText(),
+                        lblPago1.getText(),lblPago2.getText(),lblPago3.getText(),lblPago4.getText());
+        ProductosDao dao1 = new ProductosDao();
+        dao1.addUser(productos);
+        cleanFields();
     }//GEN-LAST:event_btnAgregarProductoActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
@@ -336,4 +348,8 @@ public class DetalleProductoFr extends javax.swing.JFrame {
     private javax.swing.JLabel lblProveedor3;
     private javax.swing.JLabel lblProveedor4;
     // End of variables declaration//GEN-END:variables
+
+    private void cleanFields() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
