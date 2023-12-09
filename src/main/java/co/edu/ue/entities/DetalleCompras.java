@@ -6,15 +6,15 @@ public class DetalleCompras {
     
     private String deta_codigo;
     private String deta_descripcion;
-    private String deta_cantiodadProducto;
+    private String deta_cantidadProducto;
     private String deta_monto;
     private String prov_nit;
     private String prod_codigo;
 
-    public DetalleCompras(String deta_codigo, String deta_descripcion, String deta_cantiodadProducto, String deta_monto, String prov_nit, String prod_codigo) {
+    public DetalleCompras(String deta_codigo, String deta_descripcion, String deta_cantidadProducto, String deta_monto, String prov_nit, String prod_codigo) {
         this.deta_codigo = deta_codigo;
         this.deta_descripcion = deta_descripcion;
-        this.deta_cantiodadProducto = deta_cantiodadProducto;
+        this.deta_cantidadProducto = deta_cantidadProducto;
         this.deta_monto = deta_monto;
         this.prov_nit = prov_nit;
         this.prod_codigo = prod_codigo;
@@ -36,12 +36,12 @@ public class DetalleCompras {
         this.deta_descripcion = deta_descripcion;
     }
 
-    public String getDeta_cantiodadProducto() {
-        return deta_cantiodadProducto;
+    public String getDeta_cantidadProducto() {
+        return deta_cantidadProducto;
     }
 
-    public void setDeta_cantiodadProducto(String deta_cantiodadProducto) {
-        this.deta_cantiodadProducto = deta_cantiodadProducto;
+    public void setDeta_cantidadProducto(String deta_cantidadProducto) {
+        this.deta_cantidadProducto = deta_cantidadProducto;
     }
 
     public String getDeta_monto() {
@@ -74,7 +74,7 @@ public class DetalleCompras {
         sb.append("DetalleCompras{");
         sb.append("deta_codigo=").append(deta_codigo);
         sb.append(", deta_descripcion=").append(deta_descripcion);
-        sb.append(", deta_cantiodadProducto=").append(deta_cantiodadProducto);
+        sb.append(", deta_cantidadProducto=").append(deta_cantidadProducto);
         sb.append(", deta_monto=").append(deta_monto);
         sb.append(", prov_nit=").append(prov_nit);
         sb.append(", prod_codigo=").append(prod_codigo);
