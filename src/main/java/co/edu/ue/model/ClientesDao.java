@@ -18,10 +18,7 @@ public class ClientesDao {
    public Clientes addCliente(Clientes cliente){
        
        Connection conn = this.conDB.getConexionDB();
-       String query ="INSERT clientes VALUES(?,?,?)";
-       String queryTel ="INSERT telefonos VALUES(NULL,?,?)";
-       String queryCorr ="INSERT correos VALUES(NULL,?,?)";
-       String queryDir ="INSERT direcciones VALUES(NULL,?,?)";
+       String query ="INSERT clientes VALUES(?,?,?,?, null, null, null)";
        
        try {
            if(this.statement==null){
@@ -29,12 +26,7 @@ public class ClientesDao {
                this.statement.setString(0, cliente.getCli_documento());
                this.statement.setString(1, cliente.getCli_nombres());
                this.statement.setString(2, cliente.getCli_apellidos());
-               this.statement = conn.prepareStatement(queryTel);
-               this.statement.setString(1, cliente.getTel_codigo());
-               this.statement = conn.prepareStatement(queryCorr);
-               this.statement.setString(1, cliente.getCorr_codigo());
-               this.statement = conn.prepareStatement(queryDir);
-               this.statement.setString(1, cliente.getDir_codigo());
+               this.statement.setString(3, cliente.getCli_contraseña());
                
            }
        } catch (Exception e) {

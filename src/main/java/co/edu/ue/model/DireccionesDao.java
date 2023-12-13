@@ -1,39 +1,34 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.ue.model;
 
-import co.edu.ue.entities.Productos;
+import co.edu.ue.entities.Direcciones;
 import co.edu.ue.util.ConexionDB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
-
-public class ProductosDao {
+public class DireccionesDao {
     
-     private ConexionDB conDB;
+   private ConexionDB conDB;
    PreparedStatement statement;
    
-   public ProductosDao(){
+   public DireccionesDao(){
     conDB = new ConexionDB();
     this.statement = null;
    }
     
-   public Productos addProducto(Productos producto){
-       
+   public Direcciones addDireccion(Direcciones direccion){
+      
        Connection conn = this.conDB.getConexionDB();
-       String query ="INSERT productos VALUES(null,?,?)";
+       String query ="INSERT direcciones VALUES(null,?,?)";
        
-       try {
-           if(this.statement==null){
-               this.statement = conn.prepareStatement(query);
-               this.statement.setString(1, producto.getProd_descripcion());
-               this.statement.setString(2, producto.getProd_lote());
+try{
+            if(this.statement==null){
+                this.statement=conn.prepareStatement(query);                
+                this.statement.setString(1, direccion.getDir_codigoPostal());
+                this.statement.setString(2, direccion.getDir_descripcion());
                 int response = this.statement.executeUpdate();
-                if(response>0) JOptionPane.showMessageDialog(null, "Se ha agregado un producto");
-           }
+                if(response>0) JOptionPane.showMessageDialog(null, "Se ha agregado una dirección");
+            }
         }catch(Exception e){
             System.out.println(""+e.toString());
             
@@ -47,9 +42,10 @@ public class ProductosDao {
                 }
             }
         }
-        return producto;
+        return direccion;
     }
-    public void addProd(Productos producto) {
+
+    public void addDir(Direcciones direccions) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

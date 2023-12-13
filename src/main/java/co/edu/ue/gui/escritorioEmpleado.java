@@ -42,16 +42,21 @@ public class escritorioEmpleado extends javax.swing.JFrame {
         menuPerfil = new javax.swing.JMenu();
         menuCerrarSesion = new javax.swing.JMenuItem();
 
+        Desktop.setBackground(new java.awt.Color(186, 124, 56));
+        Desktop.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
         javax.swing.GroupLayout DesktopLayout = new javax.swing.GroupLayout(Desktop);
         Desktop.setLayout(DesktopLayout);
         DesktopLayout.setHorizontalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 816, Short.MAX_VALUE)
+            .addGap(0, 810, Short.MAX_VALUE)
         );
         DesktopLayout.setVerticalGroup(
             DesktopLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 467, Short.MAX_VALUE)
+            .addGap(0, 456, Short.MAX_VALUE)
         );
+
+        jMenuBar1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         menuProductos.setText("Productos");
 
@@ -108,9 +113,9 @@ public class escritorioEmpleado extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void menuRegistrarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_menuRegistrarProductosActionPerformed
-        DetalleProductoFr detalleProducto = new DetalleProductoFr();
+        StocksFr detalleProducto = new StocksFr();
         detalleProducto.setVisible(true);
-        DetalleProductoFr pantalla = new DetalleProductoFr();
+        StocksFr pantalla = new StocksFr();
         pantalla.setVisible(false);
     }//GEN-LAST:event_menuRegistrarProductosActionPerformed
 

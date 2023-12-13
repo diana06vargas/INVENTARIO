@@ -3,21 +3,20 @@ package co.edu.ue.entities;
 
 public class Telefonos {
 
-    private String tel_codigo;
+    private int tel_codigo;
     private String tel_dominio;
     private String tel_numero;
 
-    public Telefonos(String tel_codigo, String tel_dominio, String tel_numero) {
-        this.tel_codigo = tel_codigo;
+    public Telefonos(String tel_dominio, String tel_numero) {
         this.tel_dominio = tel_dominio;
         this.tel_numero = tel_numero;
     }
 
-    public String getTel_codigo() {
+    public int getTel_codigo() {
         return tel_codigo;
     }
 
-    public void setTel_codigo(String tel_codigo) {
+    public void setTel_codigo(int tel_codigo) {
         this.tel_codigo = tel_codigo;
     }
 

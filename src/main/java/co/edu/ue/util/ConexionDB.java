@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.ue.util;
 
 import java.sql.Connection;
@@ -33,7 +29,6 @@ public class ConexionDB {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             this.con = DriverManager.getConnection(this.strConexion,this.user,this.password);
-            JOptionPane.showMessageDialog(null, "Se establecio Conexión");
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, "Error en la Conexión"+e.toString());  
         }

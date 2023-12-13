@@ -1,23 +1,24 @@
 
 package co.edu.ue.entities;
 
+import java.util.Calendar;
+
 public class Productos {
     
-    private String prod_codigo;
+    private int prod_codigo;
     private String prod_descripcion;
     private String prod_lote;
 
-    public Productos(String prod_codigo, String prod_descripcion, String prod_cantidad, String prod_precio, String text1, String text2, String text3, String text4, String text5, String text6, String text7, String text8, String text9, String text10, String text11, String text12, String text13, String text14, String text15, String text16) {
-        this.prod_codigo = prod_codigo;
+    public Productos(String prod_descripcion, String prod_lote) {
         this.prod_descripcion = prod_descripcion;
         this.prod_lote = prod_lote;
     }
 
-    public String getProd_codigo() {
+    public int getProd_codigo() {
         return prod_codigo;
     }
 
-    public void setProd_codigo(String prod_codigo) {
+    public void setProd_codigo(int prod_codigo) {
         this.prod_codigo = prod_codigo;
     }
 
@@ -36,7 +37,6 @@ public class Productos {
     public void setProd_lote(String prod_lote) {
         this.prod_lote = prod_lote;
     }
-    
 
     @Override
     public String toString() {
@@ -48,7 +48,5 @@ public class Productos {
         sb.append('}');
         return sb.toString();
     }
-    
-    
     
 }

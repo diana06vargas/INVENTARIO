@@ -6,11 +6,11 @@ public class Proveedores {
     private String prov_nit;
     private String prov_nombreEmpresas;
     private String prov_descripcion;
-    private String tel_codigo;
-    private String dir_codigo;
-    private String corr_codigo;
+    private int tel_codigo;
+    private int dir_codigo;
+    private int corr_codigo;
 
-    public Proveedores(String prov_nit, String prov_nombreEmpresas, String prov_descripcion, String tel_codigo, String dir_codigo, String corr_codigo) {
+    public Proveedores(String prov_nit, String prov_nombreEmpresas, String prov_descripcion, int tel_codigo, int dir_codigo, int corr_codigo) {
         this.prov_nit = prov_nit;
         this.prov_nombreEmpresas = prov_nombreEmpresas;
         this.prov_descripcion = prov_descripcion;
@@ -43,27 +43,27 @@ public class Proveedores {
         this.prov_descripcion = prov_descripcion;
     }
 
-    public String getTel_codigo() {
+    public int getTel_codigo() {
         return tel_codigo;
     }
 
-    public void setTel_codigo(String tel_codigo) {
+    public void setTel_codigo(int tel_codigo) {
         this.tel_codigo = tel_codigo;
     }
 
-    public String getDir_codigo() {
+    public int getDir_codigo() {
         return dir_codigo;
     }
 
-    public void setDir_codigo(String dir_codigo) {
+    public void setDir_codigo(int dir_codigo) {
         this.dir_codigo = dir_codigo;
     }
 
-    public String getCorr_codigo() {
+    public int getCorr_codigo() {
         return corr_codigo;
     }
 
-    public void setCorr_codigo(String corr_codigo) {
+    public void setCorr_codigo(int corr_codigo) {
         this.corr_codigo = corr_codigo;
     }
 

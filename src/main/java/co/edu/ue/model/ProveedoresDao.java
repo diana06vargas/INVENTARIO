@@ -1,40 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.ue.model;
 
-import co.edu.ue.entities.Productos;
+import co.edu.ue.entities.Proveedores;
 import co.edu.ue.util.ConexionDB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
-
-public class ProductosDao {
+public class ProveedoresDao {
     
-     private ConexionDB conDB;
+   private ConexionDB conDB;
    PreparedStatement statement;
    
-   public ProductosDao(){
+   public ProveedoresDao(){
     conDB = new ConexionDB();
     this.statement = null;
    }
     
-   public Productos addProducto(Productos producto){
+   public Proveedores addProveedor(Proveedores proveedor){
        
        Connection conn = this.conDB.getConexionDB();
-       String query ="INSERT productos VALUES(null,?,?)";
+       String query ="INSERT proveedores VALUES(?,?,?, null, null, null)";
        
        try {
            if(this.statement==null){
                this.statement = conn.prepareStatement(query);
-               this.statement.setString(1, producto.getProd_descripcion());
-               this.statement.setString(2, producto.getProd_lote());
+               this.statement.setString(0, proveedor.getProv_nit());
+               this.statement.setString(1, proveedor.getProv_nombreEmpresas());
+               this.statement.setString(2, proveedor.getProv_descripcion());
                 int response = this.statement.executeUpdate();
-                if(response>0) JOptionPane.showMessageDialog(null, "Se ha agregado un producto");
+                if(response>0) JOptionPane.showMessageDialog(null, "Se ha agregado una proveedor");
+               
            }
-        }catch(Exception e){
+       }catch(Exception e){
             System.out.println(""+e.toString());
             
         }finally{
@@ -47,9 +44,10 @@ public class ProductosDao {
                 }
             }
         }
-        return producto;
+        return proveedor;
     }
-    public void addProd(Productos producto) {
+
+    public void addProv(Proveedores proveedor) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

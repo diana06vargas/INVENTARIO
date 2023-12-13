@@ -4,15 +4,14 @@ package co.edu.ue.entities;
 
 public class DetalleCompras {
     
-    private String deta_codigo;
+    private int deta_codigo;
     private String deta_descripcion;
     private String deta_cantidadProducto;
     private String deta_monto;
     private String prov_nit;
-    private String prod_codigo;
+    private int prod_codigo;
 
-    public DetalleCompras(String deta_codigo, String deta_descripcion, String deta_cantidadProducto, String deta_monto, String prov_nit, String prod_codigo) {
-        this.deta_codigo = deta_codigo;
+    public DetalleCompras(String deta_descripcion, String deta_cantidadProducto, String deta_monto, String prov_nit, int prod_codigo) {
         this.deta_descripcion = deta_descripcion;
         this.deta_cantidadProducto = deta_cantidadProducto;
         this.deta_monto = deta_monto;
@@ -20,11 +19,11 @@ public class DetalleCompras {
         this.prod_codigo = prod_codigo;
     }
 
-    public String getDeta_codigo() {
+    public int getDeta_codigo() {
         return deta_codigo;
     }
 
-    public void setDeta_codigo(String deta_codigo) {
+    public void setDeta_codigo(int deta_codigo) {
         this.deta_codigo = deta_codigo;
     }
 
@@ -60,11 +59,11 @@ public class DetalleCompras {
         this.prov_nit = prov_nit;
     }
 
-    public String getProd_codigo() {
+    public int getProd_codigo() {
         return prod_codigo;
     }
 
-    public void setProd_codigo(String prod_codigo) {
+    public void setProd_codigo(int prod_codigo) {
         this.prod_codigo = prod_codigo;
     }
 
@@ -81,7 +80,7 @@ public class DetalleCompras {
         sb.append('}');
         return sb.toString();
     }
-    
+
     
     
 }

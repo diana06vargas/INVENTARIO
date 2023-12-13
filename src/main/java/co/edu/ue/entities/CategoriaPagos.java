@@ -2,19 +2,18 @@ package co.edu.ue.entities;
 
 public class CategoriaPagos {
     
-    private String cat_codigo;
+    private int cat_codigo;
     private String cat_descripcion;
 
-    public CategoriaPagos(String cat_codigo, String cat_descripcion, String pag_codigo) {
-        this.cat_codigo = cat_codigo;
+    public CategoriaPagos(String cat_descripcion) {
         this.cat_descripcion = cat_descripcion;
     }
 
-    public String getCat_codigo() {
+    public int getCat_codigo() {
         return cat_codigo;
     }
 
-    public void setCat_codigo(String cat_codigo) {
+    public void setCat_codigo(int cat_codigo) {
         this.cat_codigo = cat_codigo;
     }
 
@@ -35,8 +34,8 @@ public class CategoriaPagos {
         sb.append('}');
         return sb.toString();
     }
-    
-    //holaaaa
+
+
     
     
 }

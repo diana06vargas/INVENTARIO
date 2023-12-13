@@ -4,19 +4,19 @@
  */
 package co.edu.ue.principal;
 
-import co.edu.ue.gui.LoginFr;
+import co.edu.ue.gui.loginFr;
 
 /**
  *
  * @author Diana
  */
-public class MainClass {
+public class MainClassClientes {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        LoginFr pantalla = new LoginFr();
+        loginFr pantalla = new loginFr();
         pantalla.setVisible(true);
         pantalla.setLocationRelativeTo(null);
     }

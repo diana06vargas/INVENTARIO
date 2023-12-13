@@ -3,21 +3,20 @@ package co.edu.ue.entities;
 
 public class Correos {
     
-    private String corr_codigo;
+    private int corr_codigo;
     private String corr_usuario;
     private String corr_dominio;
 
-    public Correos(String corr_codigo, String corr_usuario, String corr_dominio) {
-        this.corr_codigo = corr_codigo;
+    public Correos(String corr_usuario, String corr_dominio) {
         this.corr_usuario = corr_usuario;
         this.corr_dominio = corr_dominio;
     }
 
-    public String getCorr_codigo() {
+    public int getCorr_codigo() {
         return corr_codigo;
     }
 
-    public void setCorr_codigo(String corr_codigo) {
+    public void setCorr_codigo(int corr_codigo) {
         this.corr_codigo = corr_codigo;
     }
 

@@ -4,21 +4,20 @@ package co.edu.ue.entities;
 
 public class Direcciones {
     
-    private String dir_codigo;
+    private int dir_codigo;
     private String dir_descripcion;
     private String dir_codigoPostal;
 
-    public Direcciones(String dir_codigo, String dir_descripcion, String dir_codigoPostal) {
-        this.dir_codigo = dir_codigo;
+    public Direcciones(String dir_descripcion, String dir_codigoPostal) {
         this.dir_descripcion = dir_descripcion;
         this.dir_codigoPostal = dir_codigoPostal;
     }
 
-    public String getDir_codigo() {
+    public int getDir_codigo() {
         return dir_codigo;
     }
 
-    public void setDir_codigo(String dir_codigo) {
+    public void setDir_codigo(int dir_codigo) {
         this.dir_codigo = dir_codigo;
     }
 
@@ -50,5 +49,5 @@ public class Direcciones {
     }
     
     
-    
+        
 }

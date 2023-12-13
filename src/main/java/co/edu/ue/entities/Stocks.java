@@ -1,21 +1,22 @@
 
 package co.edu.ue.entities;
 
+import java.sql.Date;
+
 public class Stocks {
     
     private String prod_precio;
     private String prod_cantidad;
-    private String detal_codigo;
+    private int detal_codigo;
     private String detal_descripcion;
-    private String detal_fechastock;
+    private Date detal_fechastock;
     private String emp_codigo;
-    private String prod_codigo;
+    private int prod_codigo;
     private String prod_lote;
 
-    public Stocks(String prod_precio, String prod_cantidad, String detal_codigo, String detal_descripcion, String detal_fechastock, String emp_codigo, String prod_codigo) {
+    public Stocks(String prod_precio, String prod_cantidad, String detal_descripcion, Date detal_fechastock, String emp_codigo, int prod_codigo, String prod_lote) {
         this.prod_precio = prod_precio;
         this.prod_cantidad = prod_cantidad;
-        this.detal_codigo = detal_codigo;
         this.detal_descripcion = detal_descripcion;
         this.detal_fechastock = detal_fechastock;
         this.emp_codigo = emp_codigo;
@@ -39,11 +40,11 @@ public class Stocks {
         this.prod_cantidad = prod_cantidad;
     }
 
-    public String getDetal_codigo() {
+    public int getDetal_codigo() {
         return detal_codigo;
     }
 
-    public void setDetal_codigo(String detal_codigo) {
+    public void setDetal_codigo(int detal_codigo) {
         this.detal_codigo = detal_codigo;
     }
 
@@ -55,11 +56,11 @@ public class Stocks {
         this.detal_descripcion = detal_descripcion;
     }
 
-    public String getDetal_fechastock() {
+    public Date getDetal_fechastock() {
         return detal_fechastock;
     }
 
-    public void setDetal_fechastock(String detal_fechastock) {
+    public void setDetal_fechastock(Date detal_fechastock) {
         this.detal_fechastock = detal_fechastock;
     }
 
@@ -71,11 +72,11 @@ public class Stocks {
         this.emp_codigo = emp_codigo;
     }
 
-    public String getProd_codigo() {
+    public int getProd_codigo() {
         return prod_codigo;
     }
 
-    public void setProd_codigo(String prod_codigo) {
+    public void setProd_codigo(int prod_codigo) {
         this.prod_codigo = prod_codigo;
     }
 
@@ -102,12 +103,6 @@ public class Stocks {
         sb.append('}');
         return sb.toString();
     }
-    
-    
 
-   
-    
-    
-    
     
 }

@@ -1,27 +1,30 @@
 
 package co.edu.ue.entities;
 
+import java.sql.Date;
+
 public class CompraClientes {
     
-    private String comp_codigo;
+    private int comp_codigo;
     private String comp_monto;
     private String comp_descripcion;
     private String cli_documento;
-    private String cat_codigo;
-    private String comp_fecha;
-    
-    public CompraClientes(String comp_codigo, String comp_monto,String prod_codigo, String comp_descripcion, String comp_cantidadProducto, String cli_documento, String pag_codigo) {
-        this.comp_codigo = comp_codigo;
+    private int cat_codigo;
+    private Date comp_fecha;
+
+    public CompraClientes(String comp_monto, String comp_descripcion, String cli_documento, int cat_codigo, Date comp_fecha) {
         this.comp_monto = comp_monto;
         this.comp_descripcion = comp_descripcion;
         this.cli_documento = cli_documento;
+        this.cat_codigo = cat_codigo;
+        this.comp_fecha = comp_fecha;
     }
 
-    public String getComp_codigo() {
+    public int getComp_codigo() {
         return comp_codigo;
     }
 
-    public void setComp_codigo(String comp_codigo) {
+    public void setComp_codigo(int comp_codigo) {
         this.comp_codigo = comp_codigo;
     }
 
@@ -49,19 +52,19 @@ public class CompraClientes {
         this.cli_documento = cli_documento;
     }
 
-    public String getCat_codigo() {
+    public int getCat_codigo() {
         return cat_codigo;
     }
 
-    public void setCat_codigo(String cat_codigo) {
+    public void setCat_codigo(int cat_codigo) {
         this.cat_codigo = cat_codigo;
     }
 
-    public String getComp_fecha() {
+    public Date getComp_fecha() {
         return comp_fecha;
     }
 
-    public void setComp_fecha(String comp_fecha) {
+    public void setComp_fecha(Date comp_fecha) {
         this.comp_fecha = comp_fecha;
     }
 
@@ -78,13 +81,7 @@ public class CompraClientes {
         sb.append('}');
         return sb.toString();
     }
-
     
-
-    
-
-    
-
     
     
 }

@@ -1,39 +1,37 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.ue.model;
 
-import co.edu.ue.entities.Productos;
+import co.edu.ue.entities.Clientes;
+import co.edu.ue.entities.Stocks;
 import co.edu.ue.util.ConexionDB;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import javax.swing.JOptionPane;
 
-
-public class ProductosDao {
+public class StocksDao {
     
-     private ConexionDB conDB;
+   private ConexionDB conDB;
    PreparedStatement statement;
    
-   public ProductosDao(){
+   public StocksDao(){
     conDB = new ConexionDB();
     this.statement = null;
    }
     
-   public Productos addProducto(Productos producto){
+   public Stocks addStock(Stocks stock){
        
        Connection conn = this.conDB.getConexionDB();
-       String query ="INSERT productos VALUES(null,?,?)";
+       String query ="INSERT stocks VALUES(null,?,?,?,?,null,null,?)";
        
        try {
            if(this.statement==null){
                this.statement = conn.prepareStatement(query);
-               this.statement.setString(1, producto.getProd_descripcion());
-               this.statement.setString(2, producto.getProd_lote());
+               this.statement.setString(2, stock.getProd_cantidad());
+               this.statement.setString(3, stock.getProd_precio());
+               this.statement.setString(4, stock.getDetal_descripcion());
+           }   this.statement.setDate(5, stock.getDetal_fechastock());
+               this.statement.setString(8, stock.getProd_lote());
                 int response = this.statement.executeUpdate();
-                if(response>0) JOptionPane.showMessageDialog(null, "Se ha agregado un producto");
-           }
+                if(response>0) JOptionPane.showMessageDialog(null, "Se ha agregado un nuevo stock");
         }catch(Exception e){
             System.out.println(""+e.toString());
             
@@ -47,9 +45,10 @@ public class ProductosDao {
                 }
             }
         }
-        return producto;
+        return stock;
     }
-    public void addProd(Productos producto) {
+
+    public void addStcks (Stocks stock) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
